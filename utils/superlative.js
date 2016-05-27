@@ -1,0 +1,37 @@
+let superlatives = [
+  'brillant',
+  'épique',
+  'exceptionnel',
+  'extraordinaire',
+  'épatant',
+  'éblouissant',
+  'éclatant',
+  'excellent',
+  'fantastique',
+  'formidable',
+  'fabuleux',
+  'glorieux',
+  'héroïque',
+  'incroyable',
+  'interloquant',
+  'inoubliable',
+  'irrésistible',
+  'incomparable',
+  'légendaire',
+  'merveilleux',
+  'mythique',
+  'mémorable',
+  'magistral',
+  'prodigieux',
+  'phénoménal',
+  'renversant',
+  'remarquable',
+  'redoutable',
+  'spectaculaire',
+  'stupéfiant',
+  'sensationnel',
+]
+
+module.exports = () => {
+  return superlatives[Math.floor(Math.random() * superlatives.length)]
+}

@@ -29,3 +29,27 @@ block body
             a.button.button--scale(href="/#{forumId}-#{forumSlug}") Retour
               span.pagination-topic__action-button-additional-text  forum
           include ./includes/topicPagination.jade
+        unless isLocked
+          form.js-form-post.form.form--touches-bottom.form--with-container
+            .form__actions-mobile
+              button.button-mobile-post(type="submit" tabindex="4")
+                .button-mobile-post__visible
+                  .button-mobile-post__icon
+            .form__container
+              .form__draft Brouillon sauvegardé.
+                span.form__draft-recover  Récupérer
+              .form__errors
+                p
+              textarea.form__textarea(placeholder="Écrivez votre #{superlative} message" tabindex="1")
+            .form__actions-desktop
+              .form__action
+              .form__action.form__action--submit
+                input.button.button--raised.button--cta.button--large.button--scale(type="submit" value="Poster" tabindex="4")
+              .form__action
+          .js-go-to-form.fab-post
+            .fab-post__inner
+              .fab-post__icon
+        else
+          .card
+            .card__header Sujet verrouillé
+            .card__body= lockRationale
