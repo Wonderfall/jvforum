@@ -1,15 +1,14 @@
 # JVForum
 
-Cette nouvelle version de JVForum est codée en Node.js.
-
 ### Dépendances
 
 - node v6.2.*
 - npm
 
-### Installation
+### Installation et lancement
 
 Depuis la racine du dépôt :
+
 * `npm install`
 * `cp config/example.js config/development.js`
 * `npm start`
@@ -20,4 +19,4 @@ Ouvrez ensuite <http://dev.jvforum.fr:3000>. Ce domaine pointe vers localhost et
 
 Utilisez `DEBUG=jvforum:*` pour afficher les logs de debug :
 
-* `DEBUG=jvforum:* npm start`
+* `DEBUG=jvforum:* npm start` (sous Windows: `set DEBUG=jvforum:* & npm start`)
