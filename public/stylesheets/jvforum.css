@@ -224,11 +224,6 @@ h1, h2, h3 {
   }
 }
 
-.aside__moderation-actions {
-  text-align: right;
-  margin: 10px 0;
-}
-
 .aside__top-buttons {
   display: table;
   margin: 0 0 12px 15px;

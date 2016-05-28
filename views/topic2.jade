@@ -11,7 +11,7 @@ block body
             .mobile-menu__opener
               .mobile-menu__opener-icon
             .mobile-menu__items
-              unless isInFavorite
+              unless isFavorite
                 span.js-favorite-toggle.js-favorite-toggle-label.mobile-menu__item(data-action="add") Mettre en favoris
               else
                 span.js-favorite-toggle.js-favorite-toggle-label.mobile-menu__item(data-action="delete") Retirer des favoris
@@ -53,3 +53,18 @@ block body
           .card
             .card__header Sujet verrouillé
             .card__body= lockRationale
+      aside.aside
+        .aside__top-buttons
+          unless isFavorite
+            span.js-favorite-toggle.aside__top-button.aside__top-button--favorite(data-action="add")
+              span.js-favorite-toggle-label.aside__top-button-label Mettre en favoris
+          else
+            span.js-favorite-toggle.aside__top-button.aside__top-button--unfavorite(data-action="delete")
+              span.js-favorite-toggle-label.aside__top-button-label Retirer des favoris
+          a.aside__top-button.aside__top-button--open-jeuxvideocom(href=urlJvc target="_blank")
+            span.aside__top-button-label Ouvrir sur JVC
+        .js-favorites
+          .js-favorites-forums.aside__menu.menu
+            span.menu__item.menu__item--blank-state Aucun forum favori
+          .js-favorites-topics.js-slider.aside__menu.menu.slider
+            span.menu__item.menu__item--blank-state Aucun topic favori

@@ -18,8 +18,9 @@ router.get('/:forumId([0-9]{1,7})/:idJvf([0-9]{1,9})-:slug([a-z0-9-]+)/:page([0-
     , idLegacyOrNew = parseInt(idJvf)
     , slug = req.params.slug
     , page = req.params.page ? parseInt(req.params.page) : 1
+    , urlJvc = `http://www.jeuxvideo.com/forums/${mode}-${forumId}-${idLegacyOrNew}-${page}-0-1-0-${slug}.htm`
 
-  fetch.topic(mode, forumId, idLegacyOrNew, page, slug, body => {
+  fetch.topic(mode, forumId, idLegacyOrNew, page, slug, (body) => {
     let parsed = parse.topic(body)
       , viewLocals = {
           userAgent: req.headers['user-agent'],
@@ -31,7 +32,8 @@ router.get('/:forumId([0-9]{1,7})/:idJvf([0-9]{1,9})-:slug([a-z0-9-]+)/:page([0-
           idLegacyOrNew,
           slug,
           page,
-          isInFavorite: false,
+          urlJvc,
+          isFavorite: false,
           superlative: superlative(),
         }
 
