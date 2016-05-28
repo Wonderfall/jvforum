@@ -1,6 +1,6 @@
 # JVForum
 
-Cette nouvelle version de JVForum est codée en node.js.
+Cette nouvelle version de JVForum est codée en Node.js.
 
 ### Dépendances
 
@@ -14,7 +14,7 @@ Depuis la racine du dépôt :
 * `cp config/example.js config/development.js`
 * `npm start`
 
-JVForum sera lancé sur <http://localhost:3000>.
+Ouvrez ensuite <http://dev.jvforum.fr:3000>. Ce domaine pointe vers localhost et permet d’utiliser le captcha de JVC.
 
 ### Debug
 
